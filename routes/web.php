@@ -14,10 +14,3 @@ use App\Http\Controllers\ChangelanguageController;
 |
 */
 
-Route::group(['middleware' => 'locale'], function() {
-    Route::get('change-language/{language}', 'ChangelanguageController@changeLanguage')
-        ->name('user.change-language');
-});
-Route::get('/', 'UserController@home')->name('/');
-Route::get('topic', 'UserController@topic')->name('topic');
-Route::get('topic/{id}','UserController@lesson');
