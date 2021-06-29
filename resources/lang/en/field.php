@@ -16,4 +16,7 @@ return [
     'list' => 'The Topics',
     'name' => 'List Topics',
     'options' => 'Ready',
+    'lesson' => 'The Lessons',
+    'lessons' => 'List Lessons',
+    'danger' => 'There are no lessons yet',
 ];

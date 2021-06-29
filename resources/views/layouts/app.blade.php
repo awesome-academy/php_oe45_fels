@@ -68,8 +68,8 @@
                 </div>
             </div>
         </nav>
-        <a href="{!! route('user.change-language', ['en']) !!}">{{ trans('field.english') }}</a>
-        <a href="{!! route('user.change-language', ['vi']) !!}">{{ trans('field.vietnam') }}</a>
+        <a href="{!! route('language', ['en']) !!}">{{ trans('field.english') }}</a>
+        <a href="{!! route('language', ['vi']) !!}">{{ trans('field.vietnam') }}</a>
         <main class="py-4">
             @yield('content')
         </main>

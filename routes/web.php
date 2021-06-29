@@ -13,13 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::group(['middleware' => 'locale'], function() {
-    Route::get('change-language/{language}', 'ChangelanguageController@changeLanguage')
-        ->name('user.change-language');
-
+    Route::get('change-language/{language}', 'ChangelanguageController@changeLanguage')->name('language');
     Auth::routes();
-
     Route::get('/', 'HomeController@index')->name('home');
-    Route::get('topic', 'HomeController@topic')->name('topic');
-});
+    Route::get('/topic', 'StartLessonController@index')->name('topic');
+    Route::get('/topic/{id}', 'StartLessonController@show')->name('lesson');
