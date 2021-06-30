@@ -7,13 +7,15 @@
         
         <div class="home">
             <div class="home-steel">
-            <a href="">
-                <button href="" class="button-homepage">{{ trans('field.Word') }}</button>
-            </a>
-            
-            <a href="{{ route('topic') }}">
-                <button class="button-homepage">{{ trans('field.Start') }}</button>
-            </a>
+
+                <a href="">
+                    <button class="button-homepage">{{ trans('field.Word') }}</button>
+                </a>
+                
+                <a href="{{ route('topic') }}">
+                    <button class="button-homepage">{{ trans('field.Start') }}</button>
+                </a>
+
             </div>
         </div>
     </header>

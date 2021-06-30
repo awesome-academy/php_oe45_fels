@@ -25,7 +25,8 @@ class HomeController extends Controller
     {
         return view('users.home');
     }
-
+    
+    // topics controllers
     public function topic(){
         $topics = Topics::latest()->paginate(config('app.paginate'));
 

@@ -1,5 +1,5 @@
 <?php
-
+// Trans English
 return [
     'Name' => 'Name',
     'Register' => 'Register',

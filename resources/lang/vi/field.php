@@ -1,5 +1,5 @@
 <?php
-
+// Trans Vietnamese
 return [
     'Name' => 'Tên người dùng',
     'Register' => 'Đăng ký',
@@ -16,5 +16,5 @@ return [
     "list" => "Chủ đề bài học",
     "name" => "Các chủ đề",
     "options" => "Tham gia",
-    "go" => "Go",
+    "go" => "Học",
 ];

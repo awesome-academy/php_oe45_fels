@@ -14,6 +14,7 @@
                     <table class="table table-bordered ">
                         <tr>
                             <th class="book">{{ trans('field.name') }}</th>
+
                             <th class="book">{{ trans('field.options') }}</th>
                         </tr>
                             @foreach($topics as $topic)
@@ -21,8 +22,9 @@
                                     <td>{{ $topic->name }}</td>
                                     <td>
                                         <form action="" method="POST">
+
                                             <a href="" title="{{ trans('field.go') }}">
-                                                <i class="fas fa-book-reader text-danger fa-lg "></i>
+                                                <i class="fas fa-book-reader text-success fa-lg "></i>
                                             </a>
                                             @csrf
                                         </form>
