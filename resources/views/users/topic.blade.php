@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ trans('home.list') }}</div>
+                <div class="card-header">{{ trans('field.list') }}</div>
 
                 <div class="card-body">
                     <div class="pull-right">
@@ -13,15 +13,15 @@
                     </div>
                     <table class="table table-bordered ">
                         <tr>
-                            <th class="book">{{ trans('home.name') }}</th>
-                            <th class="book">{{ trans('home.options') }}</th>
+                            <th class="book">{{ trans('field.name') }}</th>
+                            <th class="book">{{ trans('field.options') }}</th>
                         </tr>
                             @foreach($topics as $topic)
                                 <tr class="book">
                                     <td>{{ $topic->name }}</td>
                                     <td>
                                         <form action="" method="POST">
-                                            <a href="" title="{{ trans('home.go') }}">
+                                            <a href="" title="{{ trans('field.go') }}">
                                                 <i class="fas fa-book-reader text-success fa-lg "></i>
                                             </a>
                                             @csrf

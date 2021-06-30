@@ -10941,4 +10941,16 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
+.header-home{
+  text-align: center;
+  font-family:"Times New Roman";
+}
+.title{
+  font-size: 80px;
+}
+.pull-right{
+  float: right;
+}
+.book{
+  text-align: center;
+}
