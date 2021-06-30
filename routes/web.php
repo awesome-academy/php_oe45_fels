@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes();
+Route::group(['middleware' => 'locale'], function() {
+    Route::get('change-language/{language}', 'ChangelanguageController@changeLanguage')
+        ->name('user.change-language');
 
-Route::get('/', 'HomeController@index')->name('home');
+    Auth::routes();
+
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('topic', 'HomeController@topic')->name('topic');
+});
