@@ -7,4 +7,5 @@ return [
     'E-Mail Address' => 'Địa chỉ email',
     'Password' => 'Mật khẩu',
     'Confirm Password' => 'Xác nhận mật khẩu',
+    'test' => 'kiem tra',
 ];
