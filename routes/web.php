@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ChangelanguageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'locale'], function() {
+    Route::get('change-language/{language}', 'ChangelanguageController@changeLanguage')
+        ->name('user.change-language');
+    Auth::routes();
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/topic', 'HomeController@topic')->name('topic');
+});
+
+

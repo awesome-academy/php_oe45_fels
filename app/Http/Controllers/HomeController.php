@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Model\Topics;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('users.home');
+    }
+
+    public function topic(){
+        $topics = Topics::latest()->paginate(config('app.paginate'));
+
+        return View('users.topic', compact(('topics')));
     }
 }

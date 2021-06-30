@@ -14,6 +14,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('style/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 <body>
     <div id="app">
@@ -67,10 +69,11 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <a href="{!! route('user.change-language', ['en']) !!}">{{ trans('home.english') }}</a>
+            <a href="{!! route('user.change-language', ['vi']) !!}">{{ trans('home.vietnam') }}</a>
+                <main class="py-4">
+                    @yield('content')
+                </main>
     </div>
 </body>
 </html>
