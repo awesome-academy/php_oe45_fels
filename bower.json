@@ -1,0 +1,21 @@
+{
+  "name": "php_oe45_fels",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Thanhloc253"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ThanhLoc253/php_oe45_fels",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^5.15.3"
+  }
+}
