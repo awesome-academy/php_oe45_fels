@@ -22,7 +22,7 @@
                                     <td>
                                         <form action="" method="POST">
                                             <a href="" title="{{ trans('field.go') }}">
-                                                <i class="fas fa-book-reader text-success fa-lg "></i>
+                                                <i class="fas fa-book-reader text-danger fa-lg "></i>
                                             </a>
                                             @csrf
                                         </form>
