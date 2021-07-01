@@ -3,11 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Topic;
-use App\Models\Lesson;
+use App\Models\Word;
 
-class StartLessonController extends Controller
+class WordController extends Controller
 {
+    public function filter($filter)
+    {
+        $learned_words = auth()->user()->learned_word;
+        if ($filter == "Learned") {
+            $words = Word::whereIn('id', $learned_words)->paginate(config('app.list_word_paginate'));
+        } elseif ($filter == "Unlearned") {
+            $words = Word::whereNotIn('id', $learned_words)->paginate(config('app.list_word_paginate'));
+        } else {
+            $words = Word::paginate(config('app.list_word_paginate'));
+        }
+
+        return view('word.list')->with('words', $words);
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +28,9 @@ class StartLessonController extends Controller
      */
     public function index()
     {
-        $topics = Topic::latest()->paginate(config('app.paginate'));
+        $words = Word::paginate(config('app.list_word_paginate'));
 
-        return View('users.topic', compact('topics'));
+        return view('word.list')->with('words', $words);
     }
 
     /**
@@ -49,9 +62,19 @@ class StartLessonController extends Controller
      */
     public function show($id)
     {
-        $lessons = Lesson::ofTopicId($id)->get();
-
-        return View('users.lesson', compact('lessons'));
+        $word = Word::find($id);
+        if (auth()->user()) {
+            $learned_words = auth()->user()->learned_word;
+            if (in_array($id, $learned_words)) {
+                $learned = true;
+            } else {
+                $learned = false;
+            }
+        } else {
+            $learned = false;
+        }
+        
+        return view('word.detail')->with('word', $word)->with('learned', $learned);
     }
 
     /**

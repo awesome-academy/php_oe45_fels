@@ -30,7 +30,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">{{ trans('field.Home') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('words.index') }}">{{ trans('field.Words') }}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ trans('field.Language') }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{!! route('language', ['en']) !!}">{{ trans('field.english') }}</a>
+                                <a class="dropdown-item" href="{!! route('language', ['vi']) !!}">{{ trans('field.vietnam') }}</a>
+                            </div>
 
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -68,8 +83,6 @@
                 </div>
             </div>
         </nav>
-        <a href="{!! route('language', ['en']) !!}">{{ trans('field.english') }}</a>
-        <a href="{!! route('language', ['vi']) !!}">{{ trans('field.vietnam') }}</a>
         <main class="py-4">
             @yield('content')
         </main>

@@ -1,5 +1,6 @@
 <?php
-namespace DatabaseSeeder;
+
+namespace Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
@@ -7,9 +8,6 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this->call([
-            TopicSeeder::class,
-            LessonSeeder::class,
-        ]);
+        $this->call(WordsTableSeeder::class);
     }
 }

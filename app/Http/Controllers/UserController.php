@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
@@ -68,7 +69,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $learned_words = $user->learned_word;
+        if (($key = array_search(intval($request->word_id), $learned_words)) !== false) {
+            unset($learned_words[$key]);
+        } else {
+            array_push($learned_words, intval($request->word_id));
+        }
+        $user->learned_word = $learned_words;
+        $user->save();
+
+        return redirect()->back()->with('isSuccess', 'Thanh Cong');
     }
 
     /**
