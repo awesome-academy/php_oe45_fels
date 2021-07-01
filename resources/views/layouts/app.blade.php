@@ -14,6 +14,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/all.min.css') }}">
 </head>
 <body>
     <div id="app">
@@ -67,7 +68,8 @@
                 </div>
             </div>
         </nav>
-
+        <a href="{!! route('user.change-language', ['en']) !!}">{{ trans('field.english') }}</a>
+        <a href="{!! route('user.change-language', ['vi']) !!}">{{ trans('field.vietnam') }}</a>
         <main class="py-4">
             @yield('content')
         </main>
