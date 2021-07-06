@@ -21,7 +21,7 @@
                                     <td>{{ $topic->name }}</td>
                                     <td>
                                         <form action="" method="POST">
-                                            <a href="" title="{{ trans('field.ready') }}">
+                                            <a href="{{ route('lesson', $topic->id) }}" title="{{ trans('field.ready') }}">
                                                 <i class="fas fa-book-reader text-danger fa-lg "></i>
                                             </a>
                                             @csrf

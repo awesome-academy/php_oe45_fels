@@ -16,4 +16,7 @@ return [
     'list' => 'Danh sách chủ đề',
     'name' => 'Chủ đề',
     'options' => 'Tham gia',
+    'lesson' => 'Bài học',
+    'lessons' => 'Danh sách bài học',
+    'danger' => 'Chưa có bài học nào !!!',
 ];
