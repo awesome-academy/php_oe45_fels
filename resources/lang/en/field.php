@@ -32,4 +32,5 @@ return [
     'Got it!' => 'Got it!',
     'Category' => 'Category',
     'Language' => 'Language',
+    'Search Words' => 'Search Words',
 ];

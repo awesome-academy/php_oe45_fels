@@ -32,4 +32,6 @@ return [
     'Got it!' => 'Ghi nhớ!',
     'Category' => 'Loại từ',
     'Language' => 'Ngôn ngữ',
+    'Search Words' => 'Nhập từ',
+    
 ];
