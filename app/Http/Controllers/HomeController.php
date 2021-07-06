@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Topic;
-use App\Model\Lesson;
+use App\Models\Topic;
+use App\Models\Lesson;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

@@ -9,12 +9,12 @@
             
             <div class="home">
                 <div class="home-steel">
-                <a href="">
-                    <button href="" class="button-homepage">{{ trans('field.Word') }}</button>
+                <a class="btn btn-success" href="{{ route('words.index') }}">
+                    {{ trans('field.Word') }}
                 </a>
                 
-                <a href="{{ route('topic') }}">
-                    <button class="button-homepage">{{ trans('field.Start') }}</button>
+                <a class="btn btn-success"  href="{{ route('topic') }}">
+                    {{ trans('field.Start') }}
                 </a>
                 </div>
             </div>
