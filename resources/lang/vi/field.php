@@ -32,4 +32,8 @@ return [
     'Got it!' => 'Ghi nhớ!',
     'Category' => 'Loại từ',
     'Language' => 'Ngôn ngữ',
+    'Account Info' => 'Thông tin tài khoản',
+    'My Lesson' => 'Bài học của tôi',
+    'My Exam Results' => 'Kết quả kiểm tra',
+    'Edit' => 'Chỉnh sửa'
 ];

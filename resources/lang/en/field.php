@@ -32,4 +32,8 @@ return [
     'Got it!' => 'Got it!',
     'Category' => 'Category',
     'Language' => 'Language',
+    'Account Info' => 'Account Info',
+    'My Lesson' => 'My Lesson',
+    'My Exam Results' => 'My Exam Results',
+    'Edit' => 'Edit',
 ];
