@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/all.min.css') }}">
@@ -87,5 +87,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('footer-scripts')
 </body>
 </html>

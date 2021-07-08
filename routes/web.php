@@ -34,3 +34,5 @@ Route::resource('/words', 'WordController');
 Route::get('words/{filter}/filter', 'WordController@filter')->name('words.filter');
 
 Route::resource('/user', 'UserController');
+
+Route::get('words/search/live', 'WordController@search')->name('words.search');

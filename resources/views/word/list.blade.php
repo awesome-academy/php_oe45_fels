@@ -9,6 +9,9 @@
 
                 <div class="card-body">
                         <div class="container d-flex justify-content-end">
+                            <div class="form-group container">
+                                <input type="text" name="search" id="search" class="form-control" placeholder="{{ trans('field.Search Words') }}" />
+                            </div>
                             @if (auth()->user())
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -22,7 +25,7 @@
                                 </div>
                             @endif
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush search-result">
                             @foreach ($words as $word)
                                 <li class="list-group-item"><a href="{{ route('words.show',['word' => $word->id]) }}">{{ $word->vocabulary }}</a></li>
                             @endforeach
@@ -35,4 +38,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('footer-scripts')
+      @include('scripts.search')
 @endsection

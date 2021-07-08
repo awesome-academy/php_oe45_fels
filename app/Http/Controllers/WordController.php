@@ -4,9 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Word;
+use App\Models\Category;
 
 class WordController extends Controller
 {
+    public function search(Request $request)
+    {
+        if ($request->has('keyword')) {
+            $keyword = $request->keyword;
+            if (strlen($keyword) >= 2) {
+                $result = Word::where('vocabulary', 'like', '%'.$keyword.'%')
+                ->paginate(config('app.list_word_paginate'));
+
+                return response()->json(['result' => $result , 'success' => true, 'href' => route('words.index')]);
+            } else {
+                $result = Word::paginate(config('app.list_word_paginate'));
+                
+                return response()->json(['result' => $result , 'success' => false, 'href' => route('words.index')]);
+            }
+        } else {
+            return route('words.index');
+        }
+    }
+
     public function filter($filter)
     {
         $learned_words = auth()->user()->learned_word;
